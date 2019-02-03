@@ -13,7 +13,7 @@ import { mockedProfile } from '../../instruments/mockedData';
 import { Composer, Catcher, Post } from '../../components';
 
 // Actions
-import { createPostAsync, fetchPostsAsync } from '../../bus/posts/actions';
+import { postsActions } from '../../bus/posts/actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -23,7 +23,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        actions: bindActionCreators({ fetchPostsAsync, createPostAsync }, dispatch),
+        actions: bindActionCreators({
+            fetchPostsAsync: postsActions.fetchPostsAsync,
+            createPostAsync: postsActions.createPostAsync
+        }, dispatch),
     };
 };
 
@@ -45,23 +48,23 @@ export default class Posts extends Component {
 
         const postsJSX = posts.map((post) => {
             return (
-                <Catcher key = { post.get('id') }>
+                <Catcher key={post.get('id')}>
                     <Post
-                        actions = { actions }
-                        author = { post.get('author') }
-                        comment = { post.get('comment') }
-                        created = { post.get('created') }
-                        id = { post.get('id') }
-                        likes = { post.get('likes') }
-                        profile = { profile }
+                        actions={actions}
+                        author={post.get('author')}
+                        comment={post.get('comment')}
+                        created={post.get('created')}
+                        id={post.get('id')}
+                        likes={post.get('likes')}
+                        profile={profile}
                     />
                 </Catcher>
             );
         });
 
         return (
-            <section className = { Styles.posts }>
-                <Composer actions = { actions } profile = { profile } />
+            <section className={Styles.posts}>
+                <Composer actions={actions} profile={profile}/>
                 <FlipMove>{postsJSX}</FlipMove>
             </section>
         );
