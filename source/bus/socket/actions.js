@@ -33,5 +33,10 @@ export const socketActions = {
                 dispatch(postsActions.unlikePost(data));
             }
         });
+        socket.on('remove', (event) => {
+            const { data } = JSON.parse(event);
+
+            dispatch(postsActions.removePost(data));
+        });
     },
 };
