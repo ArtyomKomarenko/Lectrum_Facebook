@@ -24,12 +24,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
-
     ...profileActions,
-
-    /*
-    updateNameAsync:   profileActions.updateNameAsync,
-    updateAvatarAsync: profileActions.updateAvatarAsync,*/
 };
 
 @connect(mapStateToProps, mapDispatchToProps)
