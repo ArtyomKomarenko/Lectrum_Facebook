@@ -32,10 +32,9 @@ export const authActions = {
             payload: credentials,
         };
     },
-    logoutAsync: (credentials) => {
+    logoutAsync: () => {
         return {
-            type:    types.LOGOUT_ASYNC,
-            payload: credentials,
+            type: types.LOGOUT_ASYNC,
         };
     },
     authenticateAsync: () => {
