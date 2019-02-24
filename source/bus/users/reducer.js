@@ -11,7 +11,7 @@ export const usersReducer = (state = initialState, action) => {
             return fromJS(action.payload);
 
         case types.CLEAR_USERS:
-            return state.clear;
+            return state.clear();
 
         default:
             return state;
