@@ -74,6 +74,8 @@ const newPassword = {
     newPassword: 123456,
 };
 
+const meta = 'meta';
+
 global.__ = {
     userProfile,
     errorMessage,
@@ -90,6 +92,7 @@ global.__ = {
     newName,
     newAvatar,
     newPassword,
+    meta,
 };
 global.fetch = fetch;
 global.localStorage = new LocalStorage();
