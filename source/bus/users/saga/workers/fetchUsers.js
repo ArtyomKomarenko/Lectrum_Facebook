@@ -2,9 +2,9 @@
 import { put, apply } from 'redux-saga/effects';
 
 // Instruments
-import { api } from "../../../../REST";
-import { usersActions } from "../../actions";
-import { uiActions } from "../../../ui/actions";
+import { api } from '../../../../REST';
+import { usersActions } from '../../actions';
+import { uiActions } from '../../../ui/actions';
 
 export function* fetchUsers () {
     try {

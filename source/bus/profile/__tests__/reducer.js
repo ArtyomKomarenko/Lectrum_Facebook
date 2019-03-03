@@ -8,11 +8,11 @@ describe('profile reducer', () => {
     test('should return initial state by default', () => {
         expect(profileReducer(void 0, {})).toMatchInlineSnapshot(`
 Immutable.Map {
-  'id': '',
-  'firstName': '',
-  'lastName': '',
-  'avatar': '',
-  'token': '',
+  "id": "",
+  "firstName": "",
+  "lastName": "",
+  "avatar": "",
+  "token": "",
 }
 `);
     });
@@ -21,11 +21,11 @@ Immutable.Map {
         expect(profileReducer(void 0, profileActions.fillProfile(__.userProfile)))
             .toMatchInlineSnapshot(`
 Immutable.Map {
-  'id': 'TEST_ID',
-  'firstName': 'Walter',
-  'lastName': 'White',
-  'avatar': 'TEST_AVATAR',
-  'token': 'TEST_TOKEN',
+  "id": "TEST_ID",
+  "firstName": "Walter",
+  "lastName": "White",
+  "avatar": "TEST_AVATAR",
+  "token": "TEST_TOKEN",
 }
 `);
     });
@@ -34,13 +34,13 @@ Immutable.Map {
         expect(profileReducer(void 0, profileActions.updateAvatar(__.newAvatar)))
             .toMatchInlineSnapshot(`
 Immutable.Map {
-  'id': '',
-  'firstName': '',
-  'lastName': '',
-  'avatar': Array [
-    'avatar',
+  "id": "",
+  "firstName": "",
+  "lastName": "",
+  "avatar": Array [
+    "avatar",
   ],
-  'token': '',
+  "token": "",
 }
 `);
     });
