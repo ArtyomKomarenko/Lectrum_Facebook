@@ -1,5 +1,5 @@
 // Core
-import { apply, put } from 'redux-saga/effects';
+import { apply } from 'redux-saga/effects';
 import { actions } from 'react-redux-form';
 import { expectSaga } from 'redux-saga-test-plan';
 
